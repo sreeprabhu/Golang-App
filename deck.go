@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io/ioutil"
+	"strings"
+)
 
 /**
 * Create a new type of 'deck'
@@ -35,4 +39,26 @@ func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
+}
+
+/**
+* deal() - returns two sets of decks
+* d[:handSize] - return the set of elements starting from index 0 to the handSize count
+* d[handSize:] - return the set of elements until the last index after the handSize count of elements
+ */
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
+
+/**
+* toString() receiver function
+* converts sllice of string (deck of cards) to string
+* using inbuild func join(str []string, seperator string) string
+ */
+func (d deck) toString() string {
+	return strings.Join([]string(d), ",") // type casted the deck to []string
+}
+
+func (d deck) saveToFile(filename string) error {
+	return ioutil.WriteFile(filename, []byte(d.toString()), 0666) // any one can read and write this file
 }
