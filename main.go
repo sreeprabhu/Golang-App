@@ -23,6 +23,10 @@ func main() {
 
 	cards.saveToFile("my_cards")
 
+	newCards := newDeckFromFile("my_cards")
+
+	newCards.print()
+
 	// fmt.Println(cards)
 }
 
