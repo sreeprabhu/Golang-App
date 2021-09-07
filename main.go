@@ -27,6 +27,10 @@ func main() {
 
 	newCards.print()
 
+	cards.shuffle()
+
+	cards.print()
+
 	// fmt.Println(cards)
 }
 
