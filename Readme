@@ -1,0 +1,29 @@
+Golang App : This is a basic app to learn the Golang language
+
+Value Types:
+    - int, float, string, bool, struct
+    - if we pass any of these value types in to a function, we might have to use pointers to change the value of these
+    - refer struct-pointers for reference
+
+
+Reference Types:
+    - slices, maps, channels, pointers, functions
+    - if we pass any of the reference types to a function, we can easily change the value without pointers
+    - means, these types will always refer to the same memory address everytime
+
+Structs and Map:
+    - both are similar to Objects in Javascript/ Dictionary in Python / C#
+    - Map: 
+        - Both keys and values are statically typed, ie.., all keys should be of same type, same with values
+        - Use to represent a collection of related properties
+        - We have to use square braces (map[key]) to access value of a map
+        - keys are indexed, we can iterate over them
+        - Don't need to know all the keys at compile time
+
+    - Struct:
+        - In Struct, keys and values can be dynamic types
+        - Use to represent a `thing` with defferent properties
+        - We can use . also to access the values of a struct. (struct.key)
+        - keys are not indexed
+        - Need to know all the keys at compile time
+    
