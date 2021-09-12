@@ -26,4 +26,8 @@ Structs and Map:
         - We can use . also to access the values of a struct. (struct.key)
         - keys are not indexed
         - Need to know all the keys at compile time
+
+interfaces:
+    - any type which has the same properties of an interface in a program, then that type will automatically be of the same type of that interface as well
+    - ie.., any type which ualifies the above said criteria can be referred to as ther interface type
     
